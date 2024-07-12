@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //메개변수와 반환이 있는 익명함수
+        var func = function(a, b) {
+            return a + b;
+        } 
+
+        console.log(func(1, 2));
+
+        //짝수
+        var func1 = function (a) {
+            return a % 2 == 0 ? '짝수' : '홀수';
+        }
+
+        console.log(func1(4));
+
+        //평균
+        var func2 = function (name, b, c, d) {
+            return  name + '님의 평균은: ' + (b + c + d) / 3;
+        }
+
+        console.log(func2('홍길동', 87, 90, 89));
+
+        console.log('-----------------------------------------------------');
+
+        //js에서는 함수의 매개변수가 지켜지지 않아도 호출됨
+        //단, 매개변수를 지키는게 좋음
+        var x = function(a, b) {
+
+            //매개변수는 arguments 객체로 전달됨 
+            console.log(arguments);
+            console.log("첫째 매개변수:" + arguments[0]);
+            console.log("둘째 매개변수:" + arguments[1]);
+
+            return a + b;
+        }
+
+        // console.log(x());
+        console.log(x(1, 2, 3, 4, 5, 6));
+
+        console.log('-----------------------------------------------------');
+
+        
+    </script>
+
+</body>
+</html>
